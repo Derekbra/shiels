@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make My Shape</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/core.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/spectrum2.css">
+  <script type="text/javascript" src="assets/javascripts/vendor/jquery.js"/></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/underscore.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/backbone.js"/></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/spectrum2.js"/></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/paper/lib/prepro.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/paper/src/load.js"></script>
+  <script type="text/javascript" src="assets/backbone/router/shape_controller.js"/></script>
+  <script type="text/javascript" src="assets/backbone/views/color_picker.js"/></script>
+  <script type="text/javascript" src="assets/javascripts/helper/date_creator.js"/></script>
+  <script type="text/javascript" src="assets/javascripts/widgets/make_a_shape.js"/></script>
+</head>
+
+<body>
+  <div class="bg-image"></div>
+  <div class="pages">
+
+    <div id="home" class="page left">
+
+      <div class="page-wrapper">
+
+        <div class="left-column left">
+
+          <img class="logo left" src="assets/images/logo.png"/>
+
+          <ul class="left with-underline page-nav">
+            <li class="left">
+              <a href="#">HOME</a>
+            </li>
+            <li class="left">
+              <a href="#process">PROCESS</a>
+            </li>
+            <li class="left">
+              <a href="#gallery">GALLERY</a>
+            </li>
+            <li class="left">
+              <a href="#delivery">DELIVERY</a>
+            </li>
+            <li class="left">
+              <a href="#product">PRODUCT</a>
+            </li>
+            <li class="left">
+              <a href="#demo">DEMO</a>
+            </li>
+          </ul>
+
+          <div class="nav-views left">
+
+            <div class="nav-view start hidden">
+              <div class="description left">
+                <span>
+                  MAKE MY SHAPE IS AN APPLICATION THAT LETS YOU CREATE ABSTRACT SHAPES FROM DATES AND NUMBERS.
+                </span>
+                <span class="black DINWeb-bold">
+                  </br> CREATE YOUR SHAPE, PICK A SIZE AND ORDER YOUR PIECE OF UNIQUE ART IN 4 SIMPLE STEPS.
+                </span>
+              </div>
+
+              <a href="#dates" class="fixed-nav start-button"></a>
+            </div>
+
+            <div class="nav-view dates hidden">
+              <div class="description small-description left">
+                ENTER UP TO 6 DATES, YOU CAN ENTER JUST 1 IF YOU LIKE OR 2 OR 3... ITS UP TO YOU. THERE ARE DROP DOWN MENUS FOR YOU TO CHOOSE YOUR DATES. ONCE YOU HAVE PICKED YOUR DATES PRESS NEXT.
+              </div>
+              <div class="date-selector">
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+                <div class="date-set left">
+                  <span class="left date-title DINWeb">Date</span>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="days"></select>
+                  </div>
+                  <div class="select-container normal left">
+                    <div class='sp-dd'></div>
+                    <select class="months"></select>
+                  </div>
+                  <div class="select-container expanded left">
+                    <div class='sp-dd'></div>
+                    <select class="years"></select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fixed-nav view-nav">
+                <a class="DINWeb-bold" href="#home">BACK</a>
+                <a class="DINWeb-bold" href="#colors">NEXT</a>
+              </div>
+            </div>
+
+            <div class="nav-view colors hidden left">
+              <span class="description small-description left">
+                Assign colours to your dates. You can do this by using the drop down menus to choose from a range of colours. Once you have picked your colours press the NEXT button below to go to the next step.
+              </span>
+              <div class="color-selector left"></div>
+              <div class="fixed-nav view-nav">
+                <a class="DINWeb-bold" href="#dates">BACK</a>
+                <a class="DINWeb-bold" href="#preview">NEXT</a>
+              </div>
+            </div>
+
+            <div class="nav-view preview hidden left">
+              <span class="description small-description left">
+                This is your shape you can rotate and scale it to fit your page. Use the controls to change the size, rotate and place your shape on the canvas. Press reset if you'd like to go again. Once you are happy press next
+              </span>
+              <div class="controls left">
+                <div class="scale small-control control">
+                  <a href="#" class="scale-down">
+                    <img src="assets/images/scale_down.png"/>
+                  </a>
+                  <span class="type DINWeb ">SIZE</span>
+                  <a href="#" class="scale-up">
+                    <img src="assets/images/scale_up.png"/>
+                  </a>
+                </div>
+                <div class="rotate small-control control">
+                  <a href="#" class="rotate-clock">
+                    <img src="assets/images/rotate_clockwise.png"/>
+                  </a>
+                  <span class="type DINWeb ">ROTATE</span>
+                  <a href="#" class="rotate-anticlock">
+                    <img src="assets/images/rotate_anticlockwise.png"/>
+                  </a>
+                </div>
+                <div class="position large-control control">
+                  <a href="#" class="move-up">
+                    <img src="assets/images/move_up.png"/>
+                  </a>
+                  <a href="#" class="move-down">
+                    <img src="assets/images/move_down.png"/>
+                  </a>
+                  <a href="#" class="move-left">
+                    <img src="assets/images/move_left.png"/>
+                  </a>
+                  <a href="#" class="move-right">
+                    <img src="assets/images/move_right.png"/>
+                  </a>
+                  <span class="type DINWeb">POSITION</span>
+                </div>
+              </div>
+              <div class="fixed-nav view-nav">
+                <a class="DINWeb-bold" href="#colors">BACK</a>
+                <a class="DINWeb-bold" href="#note">NEXT</a>
+              </div>
+            </div>
+
+            <div class="nav-view note hidden left">
+              <span class="description small-description DINWeb left">
+                Now you can write a personal note if you want to, this will appear on the bottom of your poster. There is room for 200 characters. After you have typed your message press <b> buy my art </b> to finish off and purchase.
+              </span>
+              <textarea class="note-box DINWeb"></textarea>
+              <div class="fixed-nav view-nav">
+                <a class="DINWeb-bold" href="#preview">BACK</a>
+                <a class="DINWeb-bold" href="#finish">NEXT</a>
+              </div>
+            </div>
+
+            <div class="nav-view finish hidden left">
+            </div>
+
+          </div>
+
+        </div>
+        <div class="right-column right">
+
+          <ul class="left page-nav">
+            <li class="left">
+              <a href="#home">CONTACT</a>
+            </li>
+            <li class="left">
+              <a href="#home">TERMS</a>
+            </li>
+          </ul>
+
+          <canvas id="shapeCanvas" width="460" height="650"></canvas>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="process" class="page left">
+
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <a href="#" class="back-to-top DINWeb-bold black">Back to top ^</a>
+        <div class="left">
+
+          <span class="title">PROCESS</span>
+
+          <img class='process-diagram' src="assets/images/process.png"/>
+          <div class="left-column left">
+            <span class="process-description">
+              Make My Shape creates a unique poster in 4 simple steps. When you start you will be asked to enter up to to 6 dates. The app will then create a series of shapes based on your dates. In step 2 you can add colour to your shapes. When you have done that you can edit your shape's size, angle and position. Once you are happy with the overall look you can add a personal note. Thats it, a simple process.
+            </span>
+          </div>
+          <div class="right-column right">
+            <span class="process-description">  
+              You can buy the poster in either A1, A2, A3 or A4 size and on a number of paper finishes. After making your choices youpay for it and enter your address and delivery details. The poster gets delivered to your door free of charge in a hard tube with end caps keeping your poster pristine clean.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="gallery" class="page left">
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <a href="#" class="back-to-top DINWeb-bold black">Back to top ^</a>
+        <span class="title">GALLERY</span>
+        <div class="left-column">
+          <span class="process-description">
+            Below are some examples of other people's posters they have created with the app. Every poster is different and unique to the person who made it so each one below is different from each other.
+          </span>
+        </div>
+        <div class="viewport">
+          <ul class="gallery-examples">
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+            <li class="left"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="delivery" class="page left">
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <a href="#" class="back-to-top DINWeb-bold black">Back to top ^</a>
+        <div class="left-column left">
+
+          <span class="title">DELIVERY</span>
+
+          <span class="process-description">
+            Every Make My Shape poster is delivered to your door and is included in your final price. The whole process takes about 2 weeks. This is from your order to delivery to your front door. When you create your poster and pay for it it gets sent to our printer who produces the product, inserts it into a tube and posts it. It then gets collected by the postal service who deliver it to you. Depending where you are in the world it could take up to 2 weeks for delivery but no more. If you have any issues contact us with your order number and we will try our best to help you out.
+          </span>
+
+        </div>
+
+        <div class="right-column right">
+
+          <img src="assets/images/map.png"/>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="product" class="page left">
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <a href="#" class="back-to-top DINWeb-bold black">Back to top ^</a>
+        <div class="left-column left">
+
+          <span class="title">PRODUCT</span>
+
+          <span class="process-description">
+            Each poster is printed on high quality acid free stock. Printed onto 170gsm paper stock which is sturdy and heavy. We offer 3 finishes for your poster, matt, silk and gloss. Matt is non shiny and rough to the feel, silk is a mixture between matt and gloss. And gloss is shiny and hard to the touch.
+            <br/><br/>
+            Our printer is the best in the buisness and uses only the best machines to produce each poster. This ensures each print is high quality and the colour is vibrant and the print is sharp.
+            <br/><br/>
+            The final poster is inserted into a 2mm thick tube with end caps and posted to you. The poster will arrive to you in pristine condition, with no marks, creases or dogged corners.
+            <br/><br/>
+          </span>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="demo" class="page left">
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <a href="#" class="back-to-top DINWeb-bold black">Back to top ^</a>
+        <div class="left-column left">
+          <span class="title">DEMO</span>
+          <span class="process-description">
+            Coming Soon...
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar page left">
+      <div class="page-wrapper">
+        <div class="divider"></div>
+        <ul class="left page-nav">
+          <li class="left">
+            <a href="#">HOME</a>
+          </li>
+          <li class="left">
+            <a href="#process">PROCESS</a>
+          </li>
+          <li class="left">
+            <a href="#gallery">GALLERY</a>
+          </li>
+          <li class="left">
+            <a href="#delivery">DELIVERY</a>
+          </li>
+          <li class="left">
+            <a href="#product">PRODUCT</a>
+          </li>
+          <li class="left">
+            <a href="#demo">DEMO</a>
+          </li>
+        </ul>
+        <ul class="right page-nav">
+          <li class="left">
+            <a href="#home" class="black">CONTACT</a>
+          </li>
+          <li class="left">
+            <a href="#home" class="black">TERMS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="text/paperscript" canvas="shapeCanvas">
+
+    /////////////////////////////////////////////////////////////////////
+    // Values
+
+    tool.fixedDistance = 10;
+
+    var values = { size: tool.fixedDistance };
+
+    /////////////////////////////////////////////////////////////////////
+    // Initialisation
+
+    this.shapeMaker = new makeAShape.ShapeCreator(460,460,paper);
+
+    var _this = this;
+
+    function exportSVG()
+    {
+      console.log(project.exportSvg());
+    };
+
+    $(document).ready(function(){
+
+      $(".export").click(function(e){
+        e.preventDefault();
+        var svg =_this.shapeMaker.scaleAndReturnSVG(project.exportSvg(),3507,4966);
+        $(".preview").html(svg);
+      });
+    });
+
+  </script>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(e){
+
+      var controller = new makeAShape.ShapeController();
+
+      Backbone.history.start();
+
+    });
+
+  </script>
+
+</body>
+
+</html>
