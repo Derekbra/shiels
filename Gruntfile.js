@@ -403,6 +403,14 @@ module.exports = function(grunt) {
       }
     },
 
+    'gh-pages': {
+      options: {
+        base: 'dist',
+        message: 'Auto-generated commit with grunt-gh-pages'
+      },
+      src: ['**']
+    },
+
     // Updates all grunt plugins automatically
     devUpdate: {
       main: {
