@@ -1,0 +1,20 @@
+
+//
+// Site Components
+// --------------------------------------------------
+
+@import "reset";
+@import "core";
+@import "spectrum";
+
+//@include sprites($spritesheet-sprites);
+
+/* IE11 scrollbar bugfix */
+body {
+  -ms-overflow-style: scrollbar;
+  // height: 100%;
+}
+
+html {
+  // height: 100%;
+}

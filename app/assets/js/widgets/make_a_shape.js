@@ -1,4 +1,6 @@
+paper.install(window);
 var makeAShape = window.makeAShape || {};
+
 
 /////////////////////////////////////////////////////////////////////
 // Initialization

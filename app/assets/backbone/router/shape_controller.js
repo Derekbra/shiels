@@ -16,7 +16,7 @@ makeAShape.ShapeController = Backbone.Router.extend({
 
   initialize: function()
   {
-    _.bind(this,"scrollTo", "updateBackgroundPos");
+    //_.bind(this,"scrollTo", "updateBackgroundPos");
 
     this.dateSelector = new makeAShape.dateCreator(".date-selector");
 
