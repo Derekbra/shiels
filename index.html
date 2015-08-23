@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js">
 <head>
+  <meta charset="utf-8">
   <title>Make My Shape</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/core.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/spectrum2.css">
-  <script type="text/javascript" src="assets/javascripts/vendor/jquery.js"/></script>
-  <script type="text/javascript" src="assets/javascripts/vendor/underscore.js"></script>
-  <script type="text/javascript" src="assets/javascripts/vendor/backbone.js"/></script>
-  <script type="text/javascript" src="assets/javascripts/vendor/spectrum2.js"/></script>
-  <script type="text/javascript" src="assets/javascripts/vendor/paper/lib/prepro.js"></script>
-  <script type="text/javascript" src="assets/javascripts/vendor/paper/src/load.js"></script>
-  <script type="text/javascript" src="assets/backbone/router/shape_controller.js"/></script>
-  <script type="text/javascript" src="assets/backbone/views/color_picker.js"/></script>
-  <script type="text/javascript" src="assets/javascripts/helper/date_creator.js"/></script>
-  <script type="text/javascript" src="assets/javascripts/widgets/make_a_shape.js"/></script>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- <base href="/"> -->
+  <base href="/">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700,Light">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/modernizr.js"></script>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
 
         <div class="left-column left">
 
-          <img class="logo left" src="assets/images/logo.png"/>
+          <img class="logo left" src="assets/img/logo.png"/>
 
           <ul class="left with-underline page-nav">
             <li class="left">
@@ -186,34 +185,34 @@
               <div class="controls left">
                 <div class="scale small-control control">
                   <a href="#" class="scale-down">
-                    <img src="assets/images/scale_down.png"/>
+                    <img src="assets/img/scale_down.png"/>
                   </a>
                   <span class="type DINWeb ">SIZE</span>
                   <a href="#" class="scale-up">
-                    <img src="assets/images/scale_up.png"/>
+                    <img src="assets/img/scale_up.png"/>
                   </a>
                 </div>
                 <div class="rotate small-control control">
                   <a href="#" class="rotate-clock">
-                    <img src="assets/images/rotate_clockwise.png"/>
+                    <img src="assets/img/rotate_clockwise.png"/>
                   </a>
                   <span class="type DINWeb ">ROTATE</span>
                   <a href="#" class="rotate-anticlock">
-                    <img src="assets/images/rotate_anticlockwise.png"/>
+                    <img src="assets/img/rotate_anticlockwise.png"/>
                   </a>
                 </div>
                 <div class="position large-control control">
                   <a href="#" class="move-up">
-                    <img src="assets/images/move_up.png"/>
+                    <img src="assets/img/move_up.png"/>
                   </a>
                   <a href="#" class="move-down">
-                    <img src="assets/images/move_down.png"/>
+                    <img src="assets/img/move_down.png"/>
                   </a>
                   <a href="#" class="move-left">
-                    <img src="assets/images/move_left.png"/>
+                    <img src="assets/img/move_left.png"/>
                   </a>
                   <a href="#" class="move-right">
-                    <img src="assets/images/move_right.png"/>
+                    <img src="assets/img/move_right.png"/>
                   </a>
                   <span class="type DINWeb">POSITION</span>
                 </div>
@@ -269,7 +268,7 @@
 
           <span class="title">PROCESS</span>
 
-          <img class='process-diagram' src="assets/images/process.png"/>
+          <img class='process-diagram' src="assets/img/process.png"/>
           <div class="left-column left">
             <span class="process-description">
               Make My Shape creates a unique poster in 4 simple steps. When you start you will be asked to enter up to to 6 dates. The app will then create a series of shapes based on your dates. In step 2 you can add colour to your shapes. When you have done that you can edit your shape's size, angle and position. Once you are happy with the overall look you can add a personal note. Thats it, a simple process.
@@ -327,7 +326,7 @@
 
         <div class="right-column right">
 
-          <img src="assets/images/map.png"/>
+          <img src="assets/img/map.png"/>
 
         </div>
       </div>
@@ -400,14 +399,29 @@
         </ul>
       </div>
     </div>
-
   </div>
+
+  <script src="assets/js/vendor.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+  </script>
 
   <script type="text/paperscript" canvas="shapeCanvas">
 
     /////////////////////////////////////////////////////////////////////
     // Values
 
+    var tool = new Tool();
     tool.fixedDistance = 10;
 
     var values = { size: tool.fixedDistance };
@@ -435,18 +449,12 @@
 
   </script>
 
-  <script type="text/javascript">
-
+  <script>
     $(document).ready(function(e){
-
       var controller = new makeAShape.ShapeController();
-
       Backbone.history.start();
-
     });
-
   </script>
 
 </body>
-
 </html>
